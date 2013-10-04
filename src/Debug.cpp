@@ -16,12 +16,17 @@ namespace debug
 {
     void Log( std::string const& i_message )
     {
-        std::clog << i_message << std::endl;
+        std::clog << "LOG: " << i_message << std::endl;
+    }
+
+    void Log( double const& i_message )
+    {
+        std::clog << "LOG: " << i_message << std::endl;
     }
 
     void Error( std::string const& i_message )
     {
-        std::cerr << i_message << std::endl;
+        std::cerr << "ERROR: " << i_message << std::endl;
     }
 }
 

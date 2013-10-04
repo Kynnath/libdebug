@@ -15,11 +15,13 @@ namespace debug
 #ifndef NDEBUG
 
     void Log( std::string const& i_message );
+    void Log( double const& i_message );
     void Error( std::string const& i_message );
 
 #else
 
     void log( std::string const& i_message ){}
+    void Log( double const& i_message ){}
     void Error( std::string const& i_message ){}
 
 #endif
