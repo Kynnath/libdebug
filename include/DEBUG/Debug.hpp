@@ -8,23 +8,17 @@
 #ifndef DEBUG_HPP
 #define	DEBUG_HPP
 
- #include <iosfwd>
-
-namespace debug
-{
 #ifndef NDEBUG
 
-    void Log( std::string const& i_message );
-    void Log( double const& i_message );
-    void Error( std::string const& i_message );
+    #include <iostream>
+
+    #define DLOG( i_message ) std::clog << "LOG: " << i_message << std::endl
 
 #else
 
-    void log( std::string const& i_message ){}
-    void Log( double const& i_message ){}
-    void Error( std::string const& i_message ){}
+    #define DLOG( i_message )
 
 #endif
-}
+
 #endif	/* DEBUG_HPP */
 
